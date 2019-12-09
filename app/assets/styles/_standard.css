@@ -18,6 +18,12 @@
     &_align_items_flex_end {
         align-items: flex-end;
     }
+    &_align_items_flex_start {
+        align-items: flex-start;
+    }
+    &_align_items_center {
+        align-items: center;
+    }
 }
 
 .padding {
@@ -66,8 +72,23 @@
     &_bottom_30 {
         margin-bottom: 30;
     }
+    &_bottom_10 {
+        margin-bottom: 10;
+    }
     &_center {
         margin: 0 auto;
+    }
+    &_top_100 {
+        margin-top: 100px;
+    }
+    &_top_10 {
+        margin-top: 10px;
+    }
+    &_top_20 {
+        margin-top: 20px;
+    }
+    &_top_200 {
+        margin-top: 200px;
     }
 }
 

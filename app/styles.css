@@ -464,6 +464,18 @@ textarea {
           align-items: flex-end;
 }
 
+.flex_align_items_flex_start {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex_align_items_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .padding_5 {
   padding: 5;
 }
@@ -520,8 +532,28 @@ textarea {
   margin-bottom: 30;
 }
 
+.margin_bottom_10 {
+  margin-bottom: 10;
+}
+
 .margin_center {
   margin: 0 auto;
+}
+
+.margin_top_100 {
+  margin-top: 100px;
+}
+
+.margin_top_10 {
+  margin-top: 10px;
+}
+
+.margin_top_20 {
+  margin-top: 20px;
+}
+
+.margin_top_200 {
+  margin-top: 200px;
 }
 
 .fit_content {
@@ -548,16 +580,33 @@ body {
     overflow-x: hidden;
 }
 
-table,
-tr,
-th,
-td {
-    border: 1px solid black;
+button {
+    outline: none;
 }
 
 .nazwaDruzynyTr input,
     .nazwaDruzynyTr select {
   width: 100%;
+}
+
+.swipable {
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+
+.swiped_right {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+}
+
+.swiped_left {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
 }
 
 .transition {
@@ -577,12 +626,246 @@ td {
           transform: translateX(100vw);
 }
 
+.krasnal_container {
+    width: 200px;
+    height: 400px;
+}
+
+@media (min-width: 1280px) {
+
+  .krasnal_container {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+.moneta_container {
+    width: 200px;
+    height: 400px;
+}
+
+@media (min-width: 1280px) {
+
+  .moneta_container {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+}
+
+.krasnal {
+    width: 90px;
+    position: absolute;
+}
+
+.moneta {
+    width: 90px;
+    position: absolute;
+}
+
+#main_content {
+    margin-top: 200px;
+}
+
+@media (min-width: 1280px) {
+
+  #main_content {
+    margin-top: 40px;
+  }
+}
+
+#main_start {
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 1280px) {
+
+  #main_start {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+#liczbaDruzyn_div,
+#chlonnoscRynku_div,
+#poziomTrudnosci_div,
+#kapitalStartowy_div,
+#oprocentowanieKredytuInwestycyjnego_div,
+#oprocentowanieKredytuObrotowego_div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+
+  #liczbaDruzyn_div,
+#chlonnoscRynku_div,
+#poziomTrudnosci_div,
+#kapitalStartowy_div,
+#oprocentowanieKredytuInwestycyjnego_div,
+#oprocentowanieKredytuObrotowego_div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+}
+
+#liczbaDruzyn_div .input_standard, #chlonnoscRynku_div .input_standard, #poziomTrudnosci_div .input_standard, #kapitalStartowy_div .input_standard, #oprocentowanieKredytuInwestycyjnego_div .input_standard, #oprocentowanieKredytuObrotowego_div .input_standard {
+  font-size: 5rem;
+}
+
+@media (min-width: 1000px) {
+
+  #liczbaDruzyn_div .input_standard, #chlonnoscRynku_div .input_standard, #poziomTrudnosci_div .input_standard, #kapitalStartowy_div .input_standard, #oprocentowanieKredytuInwestycyjnego_div .input_standard, #oprocentowanieKredytuObrotowego_div .input_standard {
+    font-size: 1rem;
+    padding: 5px;
+  }
+}
+
+#liczbaDruzyn_div .button_blue_medium, #chlonnoscRynku_div .button_blue_medium, #poziomTrudnosci_div .button_blue_medium, #kapitalStartowy_div .button_blue_medium, #oprocentowanieKredytuInwestycyjnego_div .button_blue_medium, #oprocentowanieKredytuObrotowego_div .button_blue_medium {
+  font-size: 7rem;
+  padding: 30px;
+}
+
+@media (min-width: 1000px) {
+
+  #liczbaDruzyn_div .button_blue_medium, #chlonnoscRynku_div .button_blue_medium, #poziomTrudnosci_div .button_blue_medium, #kapitalStartowy_div .button_blue_medium, #oprocentowanieKredytuInwestycyjnego_div .button_blue_medium, #oprocentowanieKredytuObrotowego_div .button_blue_medium {
+    font-size: 1rem;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+#liczbaDruzyn_div .button_blue_small, #chlonnoscRynku_div .button_blue_small, #poziomTrudnosci_div .button_blue_small, #kapitalStartowy_div .button_blue_small, #oprocentowanieKredytuInwestycyjnego_div .button_blue_small, #oprocentowanieKredytuObrotowego_div .button_blue_small {
+  font-size: 3rem;
+  padding: 30px;
+  margin: 10px;
+}
+
+@media (min-width: 1000px) {
+
+  #liczbaDruzyn_div .button_blue_small, #chlonnoscRynku_div .button_blue_small, #poziomTrudnosci_div .button_blue_small, #kapitalStartowy_div .button_blue_small, #oprocentowanieKredytuInwestycyjnego_div .button_blue_small, #oprocentowanieKredytuObrotowego_div .button_blue_small {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+
+#nazwyDruzynTabela {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 4rem;
+}
+
+@media (min-width: 1000px) {
+
+  #nazwyDruzynTabela {
+    font-size: 1.5rem;
+  }
+}
+
+#nazwyDruzynTabela select {
+  padding: 10px;
+  margin: 10px;
+  font-size: 3rem;
+}
+
+@media (min-width: 1000px) {
+
+  #nazwyDruzynTabela select {
+    padding: 5px;
+    margin: 5px;
+    font-size: 1rem;
+  }
+}
+
+#ustawieniaParametrow {
+    margin: 0 auto;
+}
+
+.input_standard {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+
+  .input_standard {
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
 .header_big_blue {
-  font-size: 2rem;
+  font-size: 3.5rem;
   background-color: #4caccc;
   color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 3px solid whitesmoke;
+}
+
+@media (min-width: 1000px) {
+
+  .header_big_blue {
+    font-size: 2rem;
+  }
+}
+
+.logo_zpsb {
+    padding: 30px;
+    width: 80%;
+}
+
+@media (min-width: 1280px) {
+
+  .logo_zpsb {
+    width: 30%;
+  }
+}
+
+.logo_zpsb img {
+  width: 100%;
+}
+
+.logo_kingsize {
+    width: 50%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+
+  .logo_kingsize {
+    width: 30%;
+  }
+}
+
+.logo_kingsize img {
+  width: 100%;
 }
 
 @-webkit-keyframes example {
@@ -623,16 +906,6 @@ td {
     }
 }
 
-.input_standard {
-  border-radius: 4px;
-  color: black;
-  font-size: 1.5rem;
-}
-
-.input_text_center {
-  text-align: center;
-}
-
 @-webkit-keyframes rot {
     0% {
         -webkit-transform: translateX(-50%) rotate(0deg);
@@ -671,13 +944,36 @@ td {
     }
 }
 
-.button_blue_medium {
-  background-color: #3777bf;
-  font-size: 2rem;
+.button_blue_small {
+  background-color: #4caccc;
+  color: white;
+  border: 3px solid whitesmoke;
+  font-size: 1rem;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.button_blue_small:hover {
+  background-color: #ff7474;
+}
+
+.button_blue_medium {
+  background-color: #4caccc;
+  color: white;
+  border: 3px solid whitesmoke;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.button_blue_medium:hover {
+  background-color: #ff7474;
 }
 
 .button_big_pink {
@@ -694,6 +990,7 @@ td {
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
   border: 3px solid whitesmoke;
+  transition-duration: 0.5s;
 }
 
 .button_big_pink_with_hover:hover {
@@ -703,6 +1000,85 @@ td {
           animation-duration: 4s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.button_big_pink:hover {
+  background-color: #ff7474;
+}
+
+.button_start {
+  padding: 20px 35px 20px 35px;
+  font-size: 7rem;
+  text-align: center;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: #ff25c0;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  border: 3px solid whitesmoke;
+  transition-duration: 0.5s;
+}
+
+.button_start_with_hover:hover {
+  -webkit-animation-name: rot;
+          animation-name: rot;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.button_start:hover {
+  background-color: #ff7474;
+}
+
+@media (min-width: 1280px) {
+
+  .button_start {
+    font-size: 3rem;
+  }
+}
+
+.button_start_small {
+  padding: 20px 35px 20px 35px;
+  font-size: 5rem;
+  text-align: center;
+  border-radius: 10px;
+  color: whitesmoke;
+  background-color: #ff25c0;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  border: 3px solid whitesmoke;
+  transition-duration: 0.5s;
+  margin-bottom: 80px;
+}
+
+.button_start_small_with_hover:hover {
+  -webkit-animation-name: rot;
+          animation-name: rot;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.button_start_small:hover {
+  background-color: #ff7474;
+}
+
+@media (min-width: 1280px) {
+
+  .button_start_small {
+    font-size: 3rem;
+  }
 }
 
 .animation_1 {
@@ -749,6 +1125,14 @@ td {
 
 .background_gradient_1 {
   background: linear-gradient(180deg, rgba(155, 176, 202, 0.865983893557423) 0%, rgba(155, 200, 202, 1) 95%, rgba(9, 129, 0, 0.6979166666666667) 100%);
+}
+
+.nowaGra label {
+  font-size: 1.2rem;
+}
+
+.selected {
+    background-color: #ff7474;
 }
 
 /* ============================================= S E K C J E =========================================== */
