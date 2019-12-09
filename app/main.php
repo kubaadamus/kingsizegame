@@ -63,7 +63,7 @@
     var kapitalStartowy;
     var oprocentowanieKredytuInwestycyjnego;
     var oprocentowanieKredytuObrotowego;
-    var listaFirm = new Array();
+    var listaDruzyn = new Array();
 
     function chlonnoscRynkuUpdate(_liczbaDruzyn) {
         $("#chlonnoscRynku").val(_liczbaDruzyn * 20 - 10);
@@ -81,17 +81,17 @@
         for (i = 0; i < liczbaDruzyn; i++) {
             nazwyDruzynTr = `
             <tr class="nazwaDruzynyTr">
-                <td class="nazwaFirmyTd">Firma ` + (i + 1) + `</td>
+                <td class="nazwaFirmyTd">Drużyna ` + (i + 1) + `</td>
                 <td>
                 <select numer="` + i + `" class="input_standard nazwaFirmyWalidacjaSelect" onchange="nazwaFirmyWalidacja($(this));">
                     <option value="">WYBIERZ NAZWĘ</option>
-                    <option value="nazwa_1">Nazwa 1</option>
-                    <option value="nazwa_2">Nazwa 2</option>
-                    <option value="nazwa_3">Nazwa 3</option>
-                    <option value="nazwa_4">Nazwa 4</option>
-                    <option value="nazwa_5">Nazwa 5</option>
-                    <option value="nazwa_6">Nazwa 6</option>
-                    <option value="nazwa_7">Nazwa 7</option>
+                    <option value="FRANCJA">FRANCJA</option>
+                    <option value="JAPONIA">JAPONIA</option>
+                    <option value="KANADA">KANADA</option>
+                    <option value="NIEMCY">NIEMCY</option>
+                    <option value="USA">USA</option>
+                    <option value="WIELKA BRYTANIA">WIELKA BRYTANIA</option>
+                    <option value="WŁOCHY">WŁOCHY</option>
                 </select>
                 </td>
             </tr>
@@ -135,12 +135,12 @@
 
     function nazwaFirmyWalidacja(select) {
 
-        listaFirm = new Array();
+        listaDruzyn = new Array();
         var TablicaZajetych = new Array();
         $(".nazwaFirmyWalidacjaSelect").each(function() { // Przeleć wszystkie selecty
             if ($(this).val() != "") { // jeśli wartość skanowanego to WYBRANY
                 TablicaZajetych.push($(this).val());
-                listaFirm.push($(this).val());
+                listaDruzyn.push($(this).val());
             }
         });
 
@@ -166,7 +166,7 @@
         //console.log("kapitał startowy: " + kapitalStartowy);
         //console.log("oprocentowanie kredytu inwestycyjnego: " + oprocentowanieKredytuInwestycyjnego);
         //console.log("oprocentowanie kredytu obrotowego: " + oprocentowanieKredytuObrotowego);
-        //console.log(listaFirm);
+        //console.log(listaDruzyn);
 
         var data = new Object();
         data.liczbaDruzyn = liczbaDruzyn;
@@ -174,7 +174,7 @@
         data.kapitalStartowy = kapitalStartowy;
         data.oprocentowanieKredytuInwestycyjnego = oprocentowanieKredytuInwestycyjnego;
         data.oprocentowanieKredytuObrotowego = oprocentowanieKredytuObrotowego;
-        data.listaFirm = listaFirm;
+        data.listaDruzyn = listaDruzyn;
         var url = 'game.php?data=' + encodeURIComponent(JSON.stringify(data));
         window.location.href = url;
 

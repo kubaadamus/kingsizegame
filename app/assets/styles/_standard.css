@@ -90,6 +90,16 @@
     &_top_200 {
         margin-top: 200px;
     }
+    &_left_right_10 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &_right_5 {
+        margin-right: 5px;
+    }
+    &_left_5 {
+        margin-left: 5px;
+    }
 }
 
 .fit_content {

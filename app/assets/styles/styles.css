@@ -151,6 +151,37 @@ button {
     }
 }
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.tile {
+    margin: 2px;
+    width: 200px;
+    height: 300px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+#krok {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    padding: 40;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    transform: translate(-50%, -30px);
+    font-size: 1.5rem;
+    color: #757575;
+    font-weight: bold;
+}
+
 #nazwyDruzynTabela {
     color: white;
     padding: 10px;
@@ -197,13 +228,26 @@ button {
             font-size: 2rem;
         }
     }
+    &_small_pink {
+        font-size: 3.5rem;
+        background-color: #d841e6;
+        color: white;
+        border-radius: 10px;
+        border: 3px solid whitesmoke;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 10px;
+        @mixin pc {
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .logo_zpsb {
     padding: 30px;
-    width: 80%;
-    @mixin tv {
-        width: 30%;
+    width: 70%;
+    @mixin pc {
+        width: 20%;
     }
     img {
         width: 100%;
@@ -264,6 +308,23 @@ button {
         transition-duration: 0.5s;
         &:hover {
             background-color: #ff7474;
+        }
+        &_disabled {
+            background-color: #848484;
+            color: white;
+            border: 3px solid whitesmoke;
+            transform: translateX(-200px);
+            font-size: 1rem;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+            @mixin pc {
+                font-size: 1rem;
+                padding: 5px;
+                margin: 5px;
+            }
         }
     }
     &_blue_medium {
@@ -357,6 +418,21 @@ button {
         }
         @mixin tv {
             font-size: 3rem;
+        }
+    }
+}
+
+.arkusz {
+    table {
+        input[type=checkbox] {
+            width: 25px;
+            height: 25px;
+            border-radius: 10px;
+            border: 1px solid darkgrey;
+            margin: 5px;
+        }
+        td {
+            font-size: 1.3rem;
         }
     }
 }
